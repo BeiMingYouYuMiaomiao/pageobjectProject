@@ -23,3 +23,8 @@ class TestWeixin():
         myclass = self.driver.find_element(By.LINK_TEXT,"通讯录").get_attribute("class")
         # print(myclass)
         assert  "frame_nav_item frame_nav_item_Curr" == myclass
+
+    def test_cookie(self):
+        cookies = self.driver.get_cookies()
+        print(cookies)
+
