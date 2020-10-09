@@ -1,0 +1,13 @@
+- by: id
+  locator: name
+  action: click
+
+- by: id
+  locator: name2
+  action: click
+
+- by: id
+  locator: name2
+  action: send
+  value: "{value_key}"   #这里定义的类似于一个变量，其实目前是一个字符串。
+#                         会在使用这个文件的类中定义一个dictionary，其中该dictionary的KEY中有这个value_key就可以替换出字典中对应的value

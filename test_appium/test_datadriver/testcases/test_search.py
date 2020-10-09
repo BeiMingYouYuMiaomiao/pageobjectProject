@@ -1,0 +1,9 @@
+# -*- coding: UTF-8 -*-
+from test_appium.test_datadriver.page.app import App
+
+
+class TestSearch:
+    def test_search(self):
+        App().start().main().goto_market().goto_search().search("jd")
+
+
