@@ -79,8 +79,14 @@ class TestLivingClassOne:
         self.driver.find_element(MobileBy.ID,'com.tencent.wework:id/hxm').click()
         # 选择编辑
         self.driver.find_element(MobileBy.ID,'com.tencent.wework:id/b91').click()
-        # 选择删除
-        self.driver.find_element(MobileBy.XPATH,'//*[@text="删除成员"]').click()
+        # 选择删除  滚动查找
+        # self.driver.find_element(MobileBy.XPATH,'//*[@text="删除成员"]').click()
+        self.driver.find_element(MobileBy.ANDROID_UIAUTOMATOR,
+                                 'new UiScrollable(new UiSelector()'
+                                 '.scrollable(true)instance(0))'
+                                 '.scrollIntoView(new UiSelector()'
+                                 '.text("删除成员").instance(0);').click()
+
 
        # 选择确认删除
         self.driver.find_element(MobileBy.ID,'com.tencent.wework:id/bjp').click()
