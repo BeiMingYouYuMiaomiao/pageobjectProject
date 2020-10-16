@@ -18,6 +18,7 @@ class BasePage:
     def find(self,by,locator = None):
         #循环查找
         try:
+            # 如果by是tuple参数的实例或tuple子类的实例，则此函数返回True
             element = self._driver.find_elements(*by,locator) if isinstance(by,tuple) else self._driver.find_element(by,locator)
             self._error_count = 0
             return element
