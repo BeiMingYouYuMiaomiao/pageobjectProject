@@ -1,0 +1,13 @@
+# po_method  测试步骤的数据驱动
+search:
+  - id: home_search
+  - click: []
+  - id: search_input_text
+  - send_keys: ${keyword}
+  - id: name
+  - click: []
+back:
+  - id: action_close
+  - click: []
+
+

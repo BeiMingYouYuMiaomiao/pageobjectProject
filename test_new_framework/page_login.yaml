@@ -1,0 +1,10 @@
+
+login_by_password:
+  - text: 我的
+  - click: []
+  - text: 帐号密码登录
+  - click: []
+  - id: login_account
+  - send_keys: ${email}
+  - id: login_password
+  - send_keys: ${password}
