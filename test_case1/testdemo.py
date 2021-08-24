@@ -11,7 +11,7 @@ class TestDemo:
 
         chrome_options = Options()
         chrome_options.debugger_address = 'localhost:9222'
-        self.driver = webdriver.Chrome(options=chrome_options)
+        self.driver = webdriver.Chrome(options=chrome_options,executable_path='/Users/yuxin/Documents/tools/chromedriver')
         self.driver.maximize_window()
         self.driver.implicitly_wait(5)
 
