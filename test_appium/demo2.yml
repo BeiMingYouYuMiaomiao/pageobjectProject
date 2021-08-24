@@ -1,0 +1,9 @@
+a:
+  name: 1
+  age: 2
+b:
+  -
+    haha: qwe
+    houhou: asd
+    lala: mm
+    xixi: 789

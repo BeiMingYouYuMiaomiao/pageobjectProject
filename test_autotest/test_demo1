@@ -1,0 +1,20 @@
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+
+class Test_Hogwars():
+    def setup(self):
+        #chrome_options = Options()
+        self.driver=webdriver.Chrome(executable_path='/Users/yuxin/Documents/tools/chromedriver')
+        self.driver.maximize_window()
+
+        self.driver.implicitly_wait(10)
+    def teardown(self):
+        self.driver.quit()
+
+
+    def test_hogwars(self):
+        self.driver.get("https://ceshiren.com/")
+
+        self.driver.find_element_by_link_text('社团').click()
+        self.driver.find_element_by_link_text('Appium 中文文档小组').click()
+        self.driver.find_element_by_css_selector('css=.topic-24702 .title > a').click()

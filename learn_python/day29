@@ -1,0 +1,29 @@
+
+class Bmi:
+    def __init__(self,weiht,high):
+        self.__weight=weiht
+        self.__high=high
+        print(self.__weight,self.__high)
+
+    @property
+    def weight(self):
+        print('getter:  ' + str(self.__weight))
+        return self.__weight
+
+
+    @weight.setter
+    def weight(self,val):
+        print('setter:  ' + str(self.__weight))
+        self.__weight=val
+
+    def bmi(self):
+        bmi=self.__weight/self.__high**2
+        return bmi
+
+
+
+
+
+bmi1=Bmi(60,170)
+bmi1.weight=100
+print(bmi1.weight)

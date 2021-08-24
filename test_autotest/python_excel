@@ -1,0 +1,88 @@
+from os import getcwd
+
+import yaml
+from openpyxl import Workbook
+from openpyxl.utils import get_column_letter
+from openpyxl import load_workbook
+
+# wb = Workbook()
+#
+# dest_filename = 'empty_book.xlsx'
+#
+# ws1 = wb.active
+# ws1.title = "range names"
+# print(type(ws1))
+# for row in range(1, 40):
+#     ws1.append(range(600))
+#
+# ws2 = wb.create_sheet(title="Pi")
+#
+# ws2['F5'] = 3.14
+#
+# ws3 = wb.create_sheet(title="Data")
+# for row in range(10, 20):
+#     for col in range(27, 54):
+#         _ = ws3.cell(column=col, row=row, value="{0}".format(get_column_letter(col)))
+# print(ws3['AB11'].value)
+# ws4=wb.create_sheet(title='Test')
+# for row in range(5,20):
+#     for col in range(1,30):
+#         ws4.cell(row,col,value='1234')
+# print(ws4['AA12'].value)
+# wb.save(filename = dest_filename)
+# # with open(dest_filename) as f:
+# #     ws1_r=f.read()
+# #     print(ws1_r)
+# # print('{0:>{1}} '.format('Kevin',50))
+# # print('{0:^{1}}'.format('Kevin',50))
+# # print("decimal hex chr {0:^30}".format("name"))
+# wb1 = load_workbook(filename = 'empty_book.xlsx')
+# sheet_ranges = wb1['Test']
+# print(sheet_ranges['D18'].value)
+
+# dis=yaml.load("""
+#         - Hesperiidae
+#         - Papilionidae
+#         - Apatelodidae
+#         - Epiplemidae
+#         """,Loader=yaml.FullLoader)
+# print(dis)
+#
+# demo=yaml.load(open('demo.yml'))
+# print(demo)
+# print(getcwd())
+demo1=yaml.load_all(open('demo.yml'))
+# print(type(test_demo1)) # <class 'generator'>
+# list
+
+# for n in test_demo1:
+#
+#     print(n)
+# for m in n:
+#     print(m)
+# print('='*30)
+# demo2=yaml.load(open('demo.yml'))
+# for data in demo2:
+#     print(data)
+# print('='*30)
+
+demo3=yaml.load(open('demo2.yml'))
+print(demo3)
+for k in demo3:
+    print(k,end='')
+    print(demo3[k])
+
+for kv in demo3.items():
+    print(kv)
+
+for k,v in demo3.items():
+    print(k,v)
+
+
+demo4=yaml.load_all(open('demo2.yml'))
+for data in demo4:
+    print(data)
+
+print(demo4)
+
+
